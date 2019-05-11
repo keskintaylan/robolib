@@ -23,7 +23,7 @@ libraries for robot projects
 		qtr_enable();
 	
 - call **CheckQtr()** in a timer(or call manually) with an enough interval(<10ms) 
-- call **GetQtrPosition()** to check if senors are in a line or not
+- call **GetQtrPosition()** to check if sensors are in a line or not
 # MOTOR
 
 ## Example
@@ -41,7 +41,7 @@ libraries for robot projects
             motor_speedLock(motorLeft);
         }
 # PID
-i can't share final version of the pid code because of competitions. You should tweak the code according to your needs. However yu can use it for basic conecpts.
+i can't share final version of the pid code because of competitions. You should tweak the code according to your needs. However you can use it for basic concepts.
 ## Example
 		int16_t u;
 
