@@ -40,3 +40,23 @@ libraries for robot projects
             motor_setSpeed(motorLeft, (motor_getSpeed(motorLeft)*85UL)/100); // just slow down for caution
             motor_speedLock(motorLeft);
         }
+# PID
+i can't share final version of the pid code because of competitions. You should tweak the code according to your needs. However yu can use it for basic conecpts.
+## Example
+		int16_t u;
+
+		u = CalculatePID(QTR_POSITION_MIDDLE, GetQtrPosition());
+
+		if(u < 0)
+		{
+			motor_runws(motorLeft, FORWARD, 100);
+			if(u >= -100)
+			{
+				motor_runws(motorRight, FORWARD, 100+u);
+			}
+			else
+			{
+				motor_runws(motorRight, REVERSE, -u-100);
+			}
+		}
+		else...
